@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./img/icono1.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./CSS/detalleproductos.css">
+    <title>SILHOUETTE GYM</title>
+</head>
+
+<body>
+    <!-- MENU -->
+    <div class="contenedor-header">
+        <header>
+            <h1>SILHOUETTE <span class="txtRojo">GYM</span></h1>
+            <ul class="imagen1">
+                <img src="./img/icono1.svg">
+            </ul>
+            <nav id="nav">
+                <a href="./index2.html" onclick="seleccionar()">inicio</a>
+                <a href="./Nosotros.html" onclick="seleccionar()">Nosotros</a>
+                <a href="./index3.html" onclick="seleccionar()">Planes</a>
+                <a href="./tienda.html" onclick="seleccionar()">Tienda</a>
+                <a href="./Entrenadores.html" onclick="seleccionar()">Entrenadores</a>
+            </nav>
+            <div class="redes">
+                <a href="https://www.facebook.com/profile.php?id=100091614803805"><i
+                        class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://twitter.com/SILHOUETTE_GYM"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/silhouette_gym01"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://wa.me/51981486877"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.tiktok.com/@silhouette_gym01?is_from_webapp=1&sender_device=pc"><i
+                        class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <a class="usuario" href="./login.html"><i class="fas fa-user"></i></a>
+            <!-- Icono del menu responsive -->
+            <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- Producto -->
+
+    <div class="producto">
+        <div class="imagenes">
+            <div class="seccion-arriba-imagenes">
+                <div class="centrar">
+                    <div class="iz">
+                        <button class="boton-iz">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="izquierda" id="izzz">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+                            </svg>
+                        </button>
+                    </div>
+                    <img src="img.tienda/pantalon.png" alt="producto" />
+                    <div class="der">
+                        <button class="boton-der">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="derecha" id="derrr">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="imagen-pequeñas">
+                <img src="img.tienda/pantalon.png" alt="producto">
+                <img src="img.tienda/pantalon2.png" alt="producto">
+                <img src="img.tienda/pantalon3.png" alt="producto">
+            </div>
+        </div>
+        <div class="info-producto">
+            <div class="titulo-producto">
+                <a>PANTALON CAMUFLADO NEGRO HOMBRE</a>
+            </div>
+            <div class="detalle-producto">
+                <a>Impuesto incluido. Los gastos de envío se calculan en la pantalla de pago.</a>
+            </div>
+            <div class="precio-producto">
+                Precio:
+                <p class="price">S/. 84.90</p>
+            </div>
+            <div class="eleccion-talla">
+                <P>Talla:</P>
+                <select name="talla" id="selector">
+                    <option value="">S</option>
+                    <option value="">M</option>
+                    <option value="">L</option>
+                    <option value="">XL</option>
+                </select>
+            </div>
+            <P>Cantidad:</P>
+            <div class="botones-cantidadyañadir">
+                <div class="wrapper">
+                    <span class="minus">-</span>
+                    <span class="num">01</span>
+                    <span class="plus">+</span>
+                </div>
+
+                <button class="btn-añadir">
+                    <i class="fa-solid fa-cart-plus"></i>Añadir al carrito
+                </button>
+                <script src="producto.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <script src="./JS/app.js"></script>
+    <script src="./JS/tienda.js"></script>
+    <script src="./JS/producto.js"></script>
+</body>
+
+</html>

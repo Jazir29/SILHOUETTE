@@ -1,0 +1,254 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;400;600;800;900&display=swap');
+
+* {
+  margin: 0;
+  /* No hay espacio en blanco alrededor de los objetos */
+  padding: 0;
+  /*quita el rellenos entre los elementos*/
+  box-sizing: border-box;
+  /*Evita que el relleno y el margen se desborden*/
+  font-family: 'Barlow';
+  /*Fuente de letra*/
+}
+
+html {
+  scroll-behavior: smooth;
+  /*da suabidad al movimiento*/
+}
+
+body {
+  background-color: #dde1e9;
+  /*fondo de la pagina*/
+
+}
+
+/* Primera parte */
+
+.menu_arriba {
+  width: 100%;
+  /*ancho*/
+  position: fixed;
+  /*posicion fija*/
+  border-bottom: 1px solid #1f283e;
+  /*borde inferior de 1px de color plomo*/
+  background-color: rgba(0, 0, 0, .7);
+  /*fondo de color plomo transparente*/
+  z-index: 99;
+  /*para que este por arriba de los objetos*/
+  padding: 0 20px;
+  /*relleno de 0 en la parte superior y 20 a los lados*/
+}
+
+.imagen1 {
+  margin: 0 auto;
+  /*margen automatico*/
+  width: 30px;
+  /*ancho*/
+  height: 30px;
+  /*altura*/
+  display: flex;
+  /*aliniarlo horizontalmente al centro*/
+  margin-left: -18rem;
+  /*posicion del margen izquierdo*/
+}
+
+.menu_arriba header {
+  max-width: 1100px;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  color: #fff;
+
+}
+
+.txtRojo {
+  color: #ff1133;
+}
+
+.menu_arriba header .redes a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 8px;
+}
+
+.menu_arriba header .redes a:hover {
+  color: #ff1133;
+}
+
+.usuario {
+  text-Align: right;
+  margin-right: 0%;
+  position: absolute;
+  right: 3.5%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 8px;
+}
+
+.usuario:hover {
+  color: #ff1133;
+}
+
+.fas {
+  position: absolute;
+  right: 1%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 8px;
+  font-size: 20px;
+}
+
+.fas:hover {
+  color: #ff1133;
+}
+
+.datos{
+  margin-left: -10%;
+  margin-top: 10%;
+}
+
+.credito{
+  margin-left: 70%;
+  margin-top: -40%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 10rem;
+}
+
+.titulo {
+  font-size: 6rem;
+  color: #8C1717;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  padding: 0px 10px;
+}
+
+input[type="text"] {
+  width: 50%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 18px;
+}
+
+.botonp {
+  padding: 0.8em 30px;
+  border: 2px solid #8C1717;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: .3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #8C1717;
+  border-radius: 5px;
+  margin-top: 3rem;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 15%;
+}
+
+.botonp:hover {
+  color: #a76d6d;
+}
+
+
+.botonc {
+  padding: 0.8em 30px;
+  border: 2px solid #8C1717;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  z-index: 1;
+  font-family: inherit;
+  color: #8C1717;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 10%;
+}
+
+.botonc:hover {
+  color: #a76d6d;
+}
+
+.planes1 {
+  color: #8C1717;
+  padding: 10px 20px;
+  display: flex;
+  margin-left: 5%;
+}
+
+.planes2 {
+  color: #8C1717;
+  padding: 20px;
+  display: flex;
+  margin-top: -11.5%;
+  margin-left: 40%;
+}
+
+.planes3 {
+  color: #8C1717;
+  padding: 20px;
+  display: flex;
+  margin-top: -13.3%;
+  margin-left: 70%;
+}
+
+.Datos {
+  color: #6e2626;
+}
+
+.tarjeta1 {
+  padding: 20px 30px;
+  margin-left: 7%;
+  margin-top: 5%;
+  display: inline-block;
+}
+
+.tarjeta2 {
+  padding: 20px 30px;
+  margin-top: 5%;
+  margin-left: 5%;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 900px) {
+  .usuario {
+    right: 6%;
+  }
+
+  header .redes {
+    display: none;
+  }
+  
+  .nom_gym{
+    margin-left: 5%;
+  }
+}

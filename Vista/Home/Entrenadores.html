@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SILHOUETTE GYM</title>
+  <link rel="stylesheet" type="text/css" href="../../Controlador/CSS/Entrenadores.css">
+  <link rel="shortcut icon" href="/Controlador/IMAGENES/icono1.svg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <!-- Insertando Bibliotecas Externas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Insertando tu script personalizado -->
+  <script src="../../Controlador/JS/script.js"></script>
+  <script async>(function (w, d) {
+      var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript");
+      s.setAttribute("src", "https://app.bluecaribu.com/conversion/integration/0be5c7e0490829b7854005cb76932ba8"); h.appendChild(s);
+    })(window, document);</script>
+</head>
+
+<body>
+  <header class="cabezera" id="inicio">
+    <div class="menu_arriba">
+      <h1 class="nom_gym">SILHOUETTE <span class="txtRojo">GYM</span></h1>
+      <ul class="imagen1">
+        <img src="/Controlador/img.menu/icono1.svg">
+      </ul>
+      <nav id="nav">
+        <a href="./Index.html" onclick="seleccionar()">inicio</a>
+        <a href="./Nosotros.html" onclick="seleccionar()">Nosotros</a>
+        <a href="./Planes.php" onclick="seleccionar()">Planes</a>
+        <a href="./Tienda.html" onclick="seleccionar()">Tienda</a>
+        <a href="./Entrenadores.html" onclick="seleccionar()">Entrenadores</a>
+      </nav>
+
+      <div class="redes">
+        <a href="https://www.facebook.com/profile.php?id=100091614803805">
+          <i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://twitter.com/SILHOUETTE_GYM">
+          <i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.instagram.com/silhouette_gym01/">
+          <i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/51981486877"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.tiktok.com/@silhouette_gym01?is_from_webapp=1&sender_device=pc">
+          <i class="fa-brands fa-tiktok"></i></a>
+      </div>
+      <a class="nav-link itemText" id="sesionLink" href="#">
+        <i class="fas" id="sesionIcon"></i>
+      </a>
+
+      <a class="usuario"><span id="nombre-usuario"></span></a>
+
+      <!-- Icono del menu responsive -->
+      <div class="nav-responsive" id="icono-nav" onclick="mostrarOcultarMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="contenedor head">
+      <h1 class="titulo">SILHOUETTE INSTRUCTORES Y ENTRENADORES </h1>
+      <p class="copy"></p>
+  </header>
+  <!-- Acerca de Entrenadores -->
+  <main>
+    <section class="service contenedor">
+      <h2 class="subtitulo">ENTRENADORES</h2>
+      <div class="contenedor-servicio">
+        <img src="../../Controlador/img/entrenador.grupo.jpg" alt="" srcset="">
+        <div class="checklist-servicio">
+          <div class="service">
+            <h3 class="n-service"><span class="number">!</span> Acerca de ellos</h3>
+            <p> Nuestros entrenadores son expertos altamente calificados y apasionados que brindan
+              orientación personalizada y motivación constante a nuestros miembros. Con conocimientos especializados
+              en diferentes áreas de entrenamiento, diseñan programas adaptados a las metas individuales de cada
+              persona.
+              Ya sea que estés buscando perder peso, tonificar tu cuerpo o mejorar tu resistencia, nuestros entrenadores
+              están aquí para ayudarte a alcanzar tus objetivos de acondicionamiento físico.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="trainers-container"></div><br></br>
+
+  <script src="../../Controlador/JS/Entrenadores.js"></script>
+
+  <script src="../../Controlador/JS/app.js"></script>
+    <script>
+        // Realizar una solicitud AJAX al archivo PHP que obtiene el nombre de usuario
+        // Asegúrate de ajustar la ruta del archivo PHP según tu estructura de archivos
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var response = JSON.parse(this.responseText);
+                if (response.logged_in && response.nombre) {
+                    var nombreUsuario = document.getElementById('nombre-usuario');
+                    nombreUsuario.textContent = 'Usuario: ' + response.nombre;
+                }
+            }
+        };
+        xhttp.open('GET', '/Controlador/Validacion/check_login.php', true);
+        xhttp.send();
+    </script>
+</body>
+
+</html>

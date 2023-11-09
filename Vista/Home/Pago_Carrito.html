@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SILHOUETTE GYM</title>
+
+    <!-- Insertando Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-abcdefghijklmnopqrstuvwxyz1234567890" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/5a0dc1b3bf.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="../../Controlador/CSS/Pago.css">
+    <link rel="shortcut icon" href="../../Controlador/img/icono1.svg" type="image/x-icon">
+
+    <!-- Insertando Bibliotecas Externas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Insertando Tipos de Letras -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+
+     <!-- Insertando tu script personalizado -->
+     <script src="../../Controlador/JS/script.js"></script>
+ 
+
+</head>
+
+<body>
+    <div class="menu_arriba">
+        <header>
+            <h1 class="nom_gym">SILHOUETTE <span class="txtRojo">GYM</span></h1>
+            <ul class="imagen1">
+                <img src="../../Controlador/IMAGENES/icono1.svg">
+            </ul>
+
+            <div class="redes">
+                <a href="https://www.facebook.com/profile.php?id=100091614803805">
+                    <i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://twitter.com/SILHOUETTE_GYM">
+                    <i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/silhouette_gym01/">
+                    <i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/51981486877"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.tiktok.com/@silhouette_gym01?is_from_webapp=1&sender_device=pc">
+                    <i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <a class="nav-link itemText" id="sesionLink" href="#">
+                <i class="fas" id="sesionIcon"></i>
+            </a>
+
+            <a class="usuario"><span id="nombre-usuario"></span></a>
+
+        </header>
+    </div>
+
+    <section>
+        <div class="container">
+            <h1 class="titulo">COMPRAS SILHOUETTE</h1><br></br>
+            <form action="procesar_pago.php" method="post">
+                <h2 class="Datos">Datos personales:</h2><br></br>
+
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo electronico:</label>
+                <input type="text" id="correo" name="correo" required>
+
+                <label for="number">Celular:</label>
+                <input type="text" id="celular" name="celular" required>
+
+                <label for="distrito">Distrito:</label>
+                <input type="text" id="distrito" name="distrito" required>
+
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+
+                </select><label for="text">Productos:</label>
+                <select>
+                        <option value="opcion1">Opción 1</option>
+                        <option value="opcion2">Opción 2</option>
+                        <option value="opcion3">Opción 3</option>
+                </select><br></br>
+
+                <h2 class="Datos">Metodo de tarjeta</h2><br></br>
+                <label for="tarjeta">Número de tarjeta:</label>
+                <input type="text" id="tarjeta" name="tarjeta" required>
+
+                <div class="tarjeta1">
+                    <label for="fecha">Fecha de expiración:</label>
+                    <input type="text" id="fecha" name="fecha" required>
+                </div>
+
+                <div class="tarjeta2">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                </div>
+
+                <input type="submit" value="Realizar Pago" class="botonp">
+                <button id="cancelButton" class="botonc">Cancelar Pago</button><br></br><br></br>
+
+        </div>
+
+        </form>
+        </div>
+    </section>
+
+    <script src="../../Controlador/JS/app.js"></script>
+
+    <script>
+        // Realizar una solicitud AJAX al archivo PHP que obtiene el nombre de usuario
+        // Asegúrate de ajustar la ruta del archivo PHP según tu estructura de archivos
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var response = JSON.parse(this.responseText);
+                if (response.logged_in && response.nombre) {
+                    var nombreUsuario = document.getElementById('nombre-usuario');
+                    nombreUsuario.textContent = 'Usuario: ' + response.nombre;
+                }
+            }
+        };
+        xhttp.open('GET', '/Controlador/Validacion/check_login.php', true);
+        xhttp.send();
+    </script>
+    <script src="../../Controlador/JS/Pago_Carrito.js"></script>
+</body>
+
+</html>

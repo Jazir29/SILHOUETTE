@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SILHOUETTE GYM</title>
+
+    <!-- Insertando Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-abcdefghijklmnopqrstuvwxyz1234567890" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/5a0dc1b3bf.js" crossorigin="anonymous"></script>
+
+    <!-- Insertando Estilos CSS -->
+    <link rel="stylesheet" type="text/css" href="/Controlador/CSS/estilo.css">
+    <link rel="shortcut icon" href="/Controlador/IMAGENES/icono1.svg" type="image/x-icon">
+
+    <!-- Insertando Tipos de Letras -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+
+    <!-- Insertando Script Animaciones -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+     <!-- Insertando Bibliotecas Externas -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Insertando tu script personalizado -->
+    <script src="../../Controlador/JS/script.js"></script>
+
+    <script async>(function (w, d) {
+        var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript");
+        s.setAttribute("src", "https://app.bluecaribu.com/conversion/integration/0be5c7e0490829b7854005cb76932ba8"); h.appendChild(s);
+    })(window, document);</script>
+    
+</head>
+
+<body>
+    <!-- MENU -->
+    <div class="menu_arriba">
+        <header>
+            <h1 class="nom_gym">SILHOUETTE <span class="txtRojo">GYM</span></h1>
+            <ul class="imagen1">
+                <img src="/Controlador/img.menu/icono1.svg">
+            </ul>
+            <nav id="nav">
+                <a href="#inicio" onclick="seleccionar()">Inicio</a>
+                <a href="#nosotros" onclick="seleccionar()">Nosotros</a>
+                <a href="#Planes" onclick="seleccionar()">Planes</a>
+                <a href="#Tienda" onclick="seleccionar()">Tienda</a>
+                <a href="#FOTOS" onclick="seleccionar()">Fotos</a>
+                <a href="#Entrenadores" onclick="seleccionar()">Entrenadores</a>
+                <a href="#contacto" onclick="seleccionar()">Contacto</a>
+            </nav>
+            <div class="redes">
+                <a href="https://www.facebook.com/profile.php?id=100091614803805"><i
+                        class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://twitter.com/SILHOUETTE_GYM"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/silhouette_gym01"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/51981486877"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.tiktok.com/@silhouette_gym01?is_from_webapp=1&sender_device=pc"><i
+                        class="fa-brands fa-tiktok"></i></a>
+            </div>
+
+
+            <a class="nav-link itemText" id="sesionLink" href="#">
+                <i class="fas" id="sesionIcon"></i>
+            </a>
+
+            <a class="usuario"><span id="nombre-usuario"></span></a>
+        
+             <!-- Icono del menu responsive -->
+             <div class="nav-responsive" id="icono-nav" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        </header>
+    </div>
+
+
+
+    <!-- Primera imagen de presentacion -->
+    <section id="inicio" class="inicio">
+        <div class="inicio">
+            <video class="video" src="/Controlador/img.menu/principal.mp4" autoplay muted loop></video>
+            <div class="contenido-video">
+                <h2>¡Mejora tu cuerpo, <span class="txtRojo">mejora tu estilo de vida!</span></h2>
+                <p>"El éxito es la suma de pequeños esfuerzos repetidos día tras día."</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Nosotros -->
+    <section id="nosotros" class="nosotros">
+        <div class="fila">
+            <div class="col">
+                <img src="/Controlador/img.menu/NOSOTROS2.jpg" alt="">
+            </div>
+            <div class="col">
+                <div class="contenedor-titulo">
+                    <div class="numero">
+                        01
+                    </div>
+                    <div class="info">
+                        <span class="frase">Conocenos un poco más</span>
+                        <h2>NOSOTROS</h2>
+                    </div>
+                </div>
+                <p>Aca encontraras toda la información que necesitas saber.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="fila-nosotros">
+            <div class="col1">
+                <span class="frase">
+                    <span class="txtRojo">CAMBIA</span> TU VIDA
+                </span>
+
+            </div>
+            <div class="col2">
+                <a href="/Vista/Home/Nosotros.html"><button>leer mas</button></a>
+            </div>
+        </div>
+    </section>
+    <br>
+
+
+    <!-- Planes -->
+
+    <section class="Planes" id="Planes">
+        <div class="contenido">
+            <div class="fila">
+                <div class="col">
+                    <div class="contenedor-titulo">
+                        <div class="numero">
+                            02
+                        </div>
+                        <div class="info">
+                            <span class="frase">MIRA NUESTROS PLANES</span>
+                            <h2>PLANES</h2>
+                        </div>
+                    </div>
+                    <p class="info">En este gym encontraran los planes al alcance de tu cartera</p>
+                    <p>EN TODOS NUESTROS PLANES ENCONTRARAS LA MEJOR CALIDAD</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="info-planes">
+            <table>
+                <tr>
+                    <td>
+                        <i class="fa-solid fa-dumbbell"></i>
+                        <h3><span class="txtRojo">PLAN </span> COMUN</h3>
+
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-dumbbell"></i>
+                        <h3><span class="txtRojo">PLAN </span> VIP</h3>
+
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-dumbbell"></i>
+                        <h3><span class="txtRojo">PLAN </span> PREMIUM</h3>
+
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+        <hr>
+        <div class="fila-planes">
+            <div class="col1">
+                <span class="frase">
+                    <span class="txtRojo">CAMBIA</span> TU VIDA
+                </span>
+
+            </div>
+            <div class="col2">
+                <a href="/Vista/Home/Planes.php"><button>leer mas</button></a>
+            </div>
+        </div>
+
+    </section>
+    <br>
+
+    <!-- Tienda -->
+
+    <section class="Tienda" id="Tienda">
+        <div class="contenido">
+            <div class="fila">
+                <div class="col">
+                    <div class="contenedor-titulo">
+                        <div class="numero">
+                            03
+                        </div>
+                        <div class="info">
+                            <span class="frase">MIRA NUESTRA GRAN VARIEDAD DE PRODUCTOS</span>
+                            <h2>TIENDA</h2>
+                        </div>
+                    </div>
+                    <p class="info">Tenemos variedad de productos para que te ayuden en cumplir tu meta</p>
+                    <p>TODOS NUESTROS PRODUCTOS SON DE LA MEJOR CALIDAD</p>
+                </div>
+
+            </div>
+        </div>
+        
+
+        <div class="info-productos">
+            <table>
+                <tr>
+                    <td>
+                        <h3><span class="txtRojo">SUPLEMENTOS</h3>
+
+                    </td>
+                    <td>
+                        <h3><span class="txtRojo">ROPA DEPORTIVA</h3>
+
+                    </td>
+                    <td>
+                        <h3><span class="txtRojo">ARTICULOS DEPORTIVOS</h3>
+
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+        <hr>
+        <div class="fila-productos">
+            <div class="col1">
+                <span class="frase">
+                    <span class="txtRojo">CAMBIA</span> TU VIDA
+                </span>
+
+            </div>
+            <div class="col2">
+                <a href="/Vista/Home/tienda.html"><button>leer mas</button></a>
+            </div>
+        </div>
+
+    </section>
+    <br>
+
+
+    <!-- FOTOS -->
+
+    <section class="FOTOS" id="FOTOS">
+        <div class="contenido-seccion">
+            <div class="contenedor-titulo">
+                <div class="numero">
+                    04
+                </div>
+                <div class="info">
+                    <span class="frase">FOTOS DE ENTRENAMIENTOS Y NUESTRAS INSTALACIONES</span>
+                    <h2>FOTOS</h2>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="col">
+                    <img src="/Controlador/img.menu/FOTO1.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="/Controlador/img.menu/FOTO2.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="/Controlador/img.menu/FOTO3.jpg" alt="">
+                </div>
+            </div>
+            <div class="fila">
+                <div class="col">
+                    <img src="/Controlador/img.menu/FOTO4.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="/Controlador/img.menu/FOTO5.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="/Controlador/img.menu/FOTO6.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section><br></br><br></br><br></br><br></br><br></br>
+
+    <!-- Entrenadores -->
+
+    <section class="Entrenadores" id="Entrenadores">
+        <div class="contenido">
+            <div class="fila">
+                <div class="col">
+                    <div class="contenedor-titulo">
+                        <div class="numero">
+                            05
+                        </div>
+                        <div class="info">
+                            <span class="frase">Los entrenadores mas especializados</span>
+                            <h2>ENTRENADORES</h2>
+                        </div>
+                    </div>
+                    <p class="info">Contamos con los entrenadores mas experimentados en diferentes tipos de rutinas</p>
+                    <p>LA MEJOR EXPERIENCIA GARNTIZADA</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="info-entrenadores">
+            <table>
+                <tr>
+                    <td>
+                        <h3><span class="txtRojo">PARA PERDIDA DE PESO</h3>
+
+                    </td>
+                    <td>
+                        <h3><span class="txtRojo">PARA GANAR MASA MUSCULAR</h3>
+
+                    </td>
+                    <td>
+                        <h3><span class="txtRojo">PARA EXPERIMENTADOS</h3>
+
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+        <hr>
+        <div class="fila-entrenadores">
+            <div class="col1">
+                <span class="frase">
+                    <span class="txtRojo">CAMBIA</span> TU VIDA
+                </span>
+
+            </div>
+            <div class="col2">
+                <a href="/Vista/Home/Entrenadores.html"><button>leer mas</button></a>
+            </div>
+        </div>
+
+    </section>
+    <hr><br></br><br></br>
+
+
+    <!-- SECCION CONTACTO -->
+
+
+    <section class="contacto" id="contacto">
+        <div class="contenido-seccion">
+            <div class="contenedor-titulo">
+                <div class="numero">
+                    06
+                </div>
+                <div class="info">
+                    <span class="frase">LA MEJOR EXPERIENCIA</span>
+                    <h2>CONTACTO</h2>
+                </div>
+            </div>
+
+            <form action="https://formsubmit.co/estebancone060302@gmail.com" method="POST">
+                <div class="input-group">
+                    <input type="text" name="name" placeholder="Nombre">
+                    <input type="email" name="email" placeholder="email">
+                    <textarea name="message" cols="30" rows="5" placeholder="Mensaje"></textarea>
+                    <input class="btn" type="submit" name="submit" value="Enviar">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+                    <input type="hidden" name="_captcha" value="false">
+                </div>
+            </form>
+
+            <div class="fila-datos">
+                <div class="col">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Avenida Morro 255
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-phone"></i>
+                    2664 - 456788
+                </div>
+                <div class="col">
+                    <i class="fa-regular fa-clock"></i>
+                    Lunes a Sábado, 8:00h - 24:00h
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../Controlador/JS/app.js"></script>
+
+    <script>
+        // Realizar una solicitud AJAX al archivo PHP que obtiene el nombre de usuario
+        // Asegúrate de ajustar la ruta del archivo PHP según tu estructura de archivos
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var response = JSON.parse(this.responseText);
+                if (response.logged_in && response.nombre) {
+                    var nombreUsuario = document.getElementById('nombre-usuario');
+                    nombreUsuario.textContent = 'Usuario: ' + response.nombre;
+                }
+            }
+        };
+        xhttp.open('GET', '/Controlador/Validacion/check_login.php', true);
+        xhttp.send();
+    </script>
+    
+    
+    
+    
+      
+</body>
+
+</html>
